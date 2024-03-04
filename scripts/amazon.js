@@ -1,6 +1,6 @@
 //Creating the data (data structure).
-
-import {cart} from '../data/cart.js';
+import { cart } from '../data/cart.js';
+import { products } from '../data/products.js';
 
 let productsHtml = "";
 
