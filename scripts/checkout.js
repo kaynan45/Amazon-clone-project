@@ -51,8 +51,8 @@ cart.forEach((cartItem) => {
                   $${formatCurrency(matchingProduct.priceCents)}
                 </div>
                 <div class="product-quantity">
-                  <span class="quantity-label-css">
-                    Quantity: <span class="quantity-label">${
+                  <span>
+                    Quantity: <span class="quantity-label js-quantity-label quantity-label-css">${
                       cartItem.quantity
                     }</span>
                   </span>
@@ -60,7 +60,7 @@ cart.forEach((cartItem) => {
               data-product-id="${matchingProduct.id}">
                     Update
                   </span>
-                  <input class="quantity-input">
+                  <input class="quantity-input js-quantity-input">
                   <span class="save-quantity-link link-primary js-save-link" data-product-id="${matchingProduct.id}">Save</span>
                   <span class="
                   delete-quantity-link link-primary js-delete-link" data-product-id="${
@@ -152,5 +152,6 @@ document.querySelectorAll(".js-save-link").forEach((link) => {
       `.js-cart-item-container-${productId}`
     );
     container.classList.remove("is-editing-quantity");
+    document.querySelector(".js-quantity-label").innerHTML = 5;
   });
 });
