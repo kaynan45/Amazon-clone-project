@@ -157,8 +157,9 @@ document.querySelectorAll(".js-save-link").forEach((link) => {
     );
     container.classList.remove("is-editing-quantity");
     const inputQuantity = container.querySelector(".js-quantity-input");
-    container.querySelector(".js-quantity-label").innerHTML = inputQuantity.value;
-
+    const finalInputValue = container.querySelector(".js-quantity-label").innerHTML =
+     parseInt(inputQuantity.value, 10);
+     
     function updateQuantity(productId, newQuantity) {
       let matchingItem;
     
@@ -172,6 +173,8 @@ document.querySelectorAll(".js-save-link").forEach((link) => {
     
       saveToStorage();
     }
-    updateQuantity(productId, newQuantity);
+    updateQuantity(productId, finalInputValue);
   });
 });
+
+console.log(cart);
