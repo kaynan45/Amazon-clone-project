@@ -656,5 +656,21 @@ export const products = [
       "apparel",
       "mens"
     ]
+  },
+  {
+    id: "bc2847e9-5323-403f-b7cf-57fde044a955",
+    image: "images/products/men-cozy-fleece-zip-up-hoodie-red.jpg",
+    name: "Max grandao",
+    rating: {
+      stars: 5,
+      count: 9999
+    },
+    priceCents: 100000,
+    keywords: [
+      "sweaters",
+      "hoodies",
+      "apparel",
+      "mens"
+    ]
   }
 ];
